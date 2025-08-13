@@ -1,141 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Naveenpaul Kolli - AI/ML Portfolio</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-      color: #333;
+    :root{
+      --bg:#f4f4f4; --ink:#333; --header:#444; --card:#fff; --muted:#666; --line:#e6e6e6; --accent:#2563eb;
     }
-    header {
-      background-color: #444;
-      color: white;
-      text-align: center;
-      padding: 30px;
-    }
-    header h1 {
-      margin: 0;
-    }
-    section {
-      padding: 20px;
-      margin: 20px;
-    }
-    footer {
-      background-color: #444;
-      color: white;
-      text-align: center;
-      padding: 15px;
-    }
-    .timeline {
-      list-style-type: none;
-      padding: 0;
-    }
-    .timeline li {
-      padding: 10px;
-      margin: 10px 0;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+    *{box-sizing:border-box}
+    body{font-family:Arial, sans-serif;background-color:var(--bg);margin:0;color:var(--ink)}
+    header{background:var(--header);color:#fff;text-align:center;padding:28px}
+    header h1{margin:0}
+    main{padding:20px}
+    section{padding:20px;margin:20px auto;background:var(--card);border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,.08);max-width:1100px;border:1px solid var(--line)}
+    h2{margin:0 0 12px}
+    h3{margin:14px 0 8px}
+    p{margin:8px 0}
+    ul{margin:6px 0 6px 18px}
+    .small{color:var(--muted);font-size:14px}
+    .tag{display:inline-block;border:1px solid var(--line);padding:4px 8px;border-radius:999px;margin:4px 6px 0 0;font-size:12px;color:#444;background:#fafafa}
+    .row{display:grid;gap:16px}
+    @media(min-width:900px){.row.cols-2{grid-template-columns:1fr 1fr}}
+    .value{background:#f0f7ff;border:1px solid #e0ecff;border-radius:8px;padding:10px}
+    a.btn{display:inline-block;margin-top:8px;text-decoration:none;background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;font-weight:bold}
+    footer{background:var(--header);color:#fff;text-align:center;padding:16px;margin-top:20px}
+    .timeline{list-style-type:none;padding:0}
+    .timeline li{padding:10px;margin:10px 0;background:#fff;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,.05);border:1px solid var(--line)}
+    .meta{margin-top:8px}
   </style>
 </head>
 <body>
   <header>
     <h1>Naveenpaul Kolli - AI/ML Portfolio</h1>
-    <p>Welcome to my portfolio showcasing AI/ML projects and more.</p>
+    <p>Welcome to my portfolio showcasing AI/ML projects and practical learning artifacts.</p>
   </header>
 
-  <!-- Professional Bio Section -->
-  <section>
-    <h2>Professional Bio</h2>
-    <p>Hi, I'm Naveenpaul Kolli, an AI/ML enthusiast currently studying Computer Science at IWU. My interests include machine learning, data science, and deep learning. I am passionate about using AI to solve real-world problems, especially in the field of computer vision and natural language processing.</p>
-  </section>
+  <main>
+    <!-- Professional Bio -->
+    <section id="bio">
+      <h2>Professional Bio</h2>
+      <p>Hi, I’m <strong>Naveenpaul Kolli</strong>, an AI/ML student at Indiana Wesleyan University (CIS – AI, 2nd semester). I’m interested in machine learning, deep learning, and data workflows. I enjoy turning ideas into simple, testable prototypes—like a Python “Netflix-style” login and a tourism UI built with basic UX principles—while steadily building stronger ML skills.</p>
+      <div class="meta">
+        <span class="tag">Python</span>
+        <span class="tag">scikit-learn</span>
+        <span class="tag">TensorFlow / CNNs</span>
+        <span class="tag">GitHub Pages</span>
+        <span class="tag">UI/UX</span>
+      </div>
+    </section>
 
-  <!-- Personal Value Proposition Section -->
-  <section>
-    <h2>Personal Value Proposition</h2>
-    <p>My unique strength lies in applying AI/ML concepts to solve practical problems. I have worked on multiple machine learning models, including deep learning and reinforcement learning projects, and I aim to bridge the gap between theory and practical, real-world applications of AI.</p>
-  </section>
+    <!-- Personal Value Proposition -->
+    <section id="pvp">
+      <h2>Personal Value Proposition</h2>
+      <p>I focus on making AI/ML work clear and useful for the intended audience. My strength is organizing projects with a simple process—plan → build → evaluate → improve—so the results are understandable and practical.</p>
+    </section>
 
-  <!-- Artifact 1 - AI and ML Timeline -->
-  <section>
-    <h2>AI and ML Timeline</h2>
-    <p>This timeline highlights the significant milestones in the **AI** and **ML** fields, demonstrating my understanding of AI/ML history and how these milestones impact modern technology.</p>
-    
-    <ul class="timeline">
-      <li><strong>1956</strong> - The term "Artificial Intelligence" was coined by John McCarthy during the **Dartmouth Conference**.</li>
-      <li><strong>1960s</strong> - **ELIZA**, one of the first chatbot programs, was created by Joseph Weizenbaum at MIT.</li>
-      <li><strong>1980s</strong> - **Backpropagation** became widely used for training neural networks.</li>
-      <li><strong>1997</strong> - IBM’s **Deep Blue** defeated chess champion Garry Kasparov, marking a major milestone in AI and game-playing algorithms.</li>
-      <li><strong>2006</strong> - The concept of **Deep Learning** became popular, leading to breakthroughs in AI/ML applications.</li>
-      <li><strong>2012</strong> - **AlexNet** revolutionized the field of computer vision by achieving remarkable results in the **ImageNet competition**.</li>
-      <li><strong>2019</strong> - OpenAI's **GPT-2** model showcased significant advancements in natural language processing.</li>
-      <li><strong>2020</strong> - **GPT-3** (the model behind tools like ChatGPT) was released, showcasing massive improvements in language generation and understanding.</li>
-    </ul>
-  </section>
+    <!-- Target Audience -->
+    <section id="audience">
+      <h2>Target Audience</h2>
+      <p>This portfolio is designed for course instructors, entry-level reviewers, and peers who want to see well-structured artifacts with concise explanations, basic demos, and clear takeaways.</p>
+    </section>
 
-  <!-- Reflection on AI and ML Timeline -->
-  <section>
-    <h2>Reflection on AI and ML Timeline</h2>
-    <p>Creating this timeline helped me gain a deeper understanding of the evolution of AI and ML technologies. I was able to map out the key milestones that influenced modern advancements in the field. This artifact reflects my grasp of AI's historical context and the impact of significant breakthroughs, which will serve as a foundation for future AI/ML projects.</p>
-  </section>
+    <!-- Artifact 1 -->
+    <section id="artifact-1">
+      <h2>Artifact 1 — AI & ML Timeline</h2>
+      <p><strong>Introduction:</strong> A concise timeline of major AI/ML milestones to ground later work in historical context.</p>
+      <p><strong>Description:</strong> From 1956 (Dartmouth) and ELIZA, through backpropagation and Deep Blue, to AlexNet and modern large language models.</p>
+      <p><strong>Objective:</strong> Show understanding of how key breakthroughs shaped today’s AI/ML practice.</p>
 
-  <!-- Artifact 2 - Machine Learning Model for Customer Churn -->
-  <section>
-    <h2>Artifact 2 - Machine Learning Model for Customer Churn Prediction</h2>
-    <p>This project involved building a **machine learning model** to predict customer churn for a company. The goal was to understand customer behavior and reduce churn rates by identifying patterns. The model was trained using **scikit-learn**, and I faced challenges such as **data imbalance**. To address this, I implemented **SMOTE** (Synthetic Minority Over-sampling Technique) to balance the dataset and improve model accuracy.</p>
-  </section>
-  
-  <!-- Reflection on Machine Learning Model -->
-  <section>
-    <h2>Reflection on Machine Learning Model for Customer Churn Prediction</h2>
-    <p>Creating this machine learning model deepened my understanding of the challenges in real-world AI projects. I learned valuable lessons in **data preprocessing**, especially handling imbalanced datasets, and **algorithm optimization**. By working through these challenges, I gained hands-on experience that will be crucial for my future work in AI/ML. This artifact demonstrates my ability to apply AI/ML techniques to solve practical problems and shows my growth as a developer and data scientist.</p>
-  </section>
+      <h3>Timeline Highlights</h3>
+      <ul class="timeline">
+        <li><strong>1956</strong> – “Artificial Intelligence” coined at the Dartmouth Conference (John McCarthy).</li>
+        <li><strong>1960s</strong> – ELIZA chatbot (Joseph Weizenbaum, MIT).</li>
+        <li><strong>1980s</strong> – Backpropagation widely used to train neural networks.</li>
+        <li><strong>1997</strong> – IBM Deep Blue defeats Garry Kasparov (search + evaluation).</li>
+        <li><strong>2006</strong> – Deep learning gains momentum.</li>
+        <li><strong>2012</strong> – AlexNet wins ImageNet; CNNs go mainstream for vision.</li>
+        <li><strong>2019</strong> – GPT-2 shows strong language generation.</li>
+        <li><strong>2020</strong> – GPT-3 expands scale and capability for NLP.</li>
+      </ul>
 
-  <!-- Artifact 3 - Deep Learning Model for Image Classification -->
-  <section>
-    <h2>Artifact 3 - Deep Learning Model for Image Classification</h2>
-    <p>This project involved building a **Deep Learning model** using **TensorFlow** to classify images from a large dataset. The model utilized a **Convolutional Neural Network (CNN)** to extract features from images, allowing it to categorize them into predefined classes like **cats, dogs, and other animals**. One of the key challenges in this project was optimizing the model's **hyperparameters** to achieve high accuracy while avoiding **overfitting**.</p>
-  </section>
+      <div class="row cols-2">
+        <div>
+          <h3>Process</h3>
+          <ul>
+            <li>Reviewed course notes and common milestone years.</li>
+            <li>Wrote short explanations focused on “why it mattered.”</li>
+            <li>Formatted for quick scanning.</li>
+          </ul>
 
-  <!-- Reflection on Deep Learning Model for Image Classification -->
-  <section>
-    <h2>Reflection on Deep Learning Model for Image Classification</h2>
-    <p>Working on this **deep learning project** was an exciting challenge. It allowed me to explore **CNNs**, one of the most powerful techniques for **image recognition**. I learned how to fine-tune **hyperparameters** and overcome challenges such as **overfitting** by using techniques like **dropout** and **data augmentation**. This project significantly expanded my skills in **deep learning** and gave me a deeper understanding of **AI models** and their real-world applications in fields like **computer vision**.</p>
-  </section>
-  <!-- Artifact 4 - Machine Learning Model for Predicting Customer Churn -->
-  <section>
-    <h2>Artifact 4 - Machine Learning Model for Predicting Customer Churn</h2>
-    <p>This artifact showcases a machine learning model I developed to predict **customer churn**. The model uses historical customer data to identify patterns and predict when a customer is likely to leave, allowing businesses to proactively engage at-risk customers and improve retention rates.</p>
-    
-    <h3>Objective</h3>
-    <p>The goal of this project was to build a reliable model for predicting customer churn. By identifying potential churn, businesses can take proactive measures to retain customers, ultimately improving customer loyalty and reducing turnover.</p>
+          <h3>Tools & Technologies</h3>
+          <ul>
+            <li>HTML/CSS (GitHub Pages)</li>
+            <li>Course readings/notes</li>
+          </ul>
+        </div>
+        <div class="value">
+          <p><strong>Value Proposition</strong></p>
+          <p><em>Unique value:</em> A simple reference that orients the viewer to the field.</p>
+          <p><em>Relevance:</em> Shows I can connect current techniques to their origins.</p>
+          <a class="btn" href="#" title="Add your timeline link or screenshot">View Timeline</a>
+        </div>
+      </div>
 
-    <h3>Process</h3>
-    <ul>
-      <li><strong>Data Collection & Cleaning:</strong> I gathered customer data, cleaned it by removing missing values, and encoded categorical variables.</li>
-      <li><strong>Feature Engineering:</strong> Selected features like customer age, usage frequency, and service plan to be used in the model.</li>
-      <li><strong>Model Selection:</strong> I experimented with **Logistic Regression** and **Random Forest** classifiers.</li>
-      <li><strong>Addressing Class Imbalance:</strong> Used **SMOTE (Synthetic Minority Over-sampling Technique)** to balance the dataset.</li>
-      <li><strong>Model Evaluation:</strong> Evaluated the model using **cross-validation**, focusing on metrics like **precision** and **recall**.</li>
-    </ul>
+      <h3>References</h3>
+      <ul class="small">
+        <li>Standard AI history references; course materials.</li>
+      </ul>
+    </section>
 
-    <h3>Tools & Technologies Used</h3>
-    <ul>
-      <li><strong>Python:</strong> For implementing the code.</li>
-      <li><strong>scikit-learn:</strong> For model building and evaluation.</li>
-      <li><strong>SMOTE:</strong> To address the class imbalance problem.</li>
-      <li><strong>Jupyter Notebook:</strong> For documenting and visualizing the project.</li>
-    </ul>
+    <!-- Artifact 2 -->
+    <section id="artifact-2">
+      <h2>Artifact 2 — Customer Churn Prediction (ML)</h2>
+      <p><strong>Introduction:</strong> Predicting churn so a business can retain at-risk customers.</p>
+      <p><strong>Description:</strong> Built a baseline model, then addressed class imbalance with SMOTE to improve minority-class detection.</p>
+      <p><strong>Objective:</strong> Practice end-to-end ML (prep → train → evaluate) on a common business problem.</p>
 
-    <h3>Reflection</h3>
-    <p>This project helped me deepen my understanding of **machine learning workflows**, especially in handling **imbalanced data** and improving **model performance**. I learned to carefully preprocess data, choose the right model, and evaluate using the correct metrics, which is crucial for building robust AI solutions.</p>
-  </section>
+      <div class="row cols-2">
+        <div>
+          <h3>Process</h3>
+          <ul>
+            <li>Cleaned data; encoded categorical features.</li>
+            <li>Train/test split; applied <em>SMOTE</em> to balance classes.</li>
+            <li>Trained Logistic Regression & Random Forest.</li>
+            <li>Evaluated with accuracy, precision, recall, F1.</li>
+          </ul>
+
+          <h3>Tools & Technologies</h3>
+          <ul>
+            <li>Python, scikit-learn</li>
+            <li>imbalanced-learn (SMOTE), pandas, matplotlib</li>
+            <li>Jupyter Notebook</li>
+          </ul>
+        </div>
+        <div class="value">
+          <p><strong>Value Proposition</strong></p>
+          <p><em>Unique value:</em> Demonstrates awareness of real-world data issues (imbalance) and how to fix them.</p>
+          <p><em>Relevance:</em> Churn modeling translates across many industries.</p>
+          <a class="btn" href="#" title="Link to repo or notebook">View Project</a>
+        </div>
+      </div>
+
+      <h3>References</h3>
+      <ul class="small">
+        <li>scikit-learn & imbalanced-learn documentation (SMOTE, metrics).</li>
+      </ul>
+    </section>
+
+    <!-- Artifact 3 -->
+    <section id="artifact-3">
+      <h2>Artifact 3 — Image Classification with CNNs (TensorFlow)</h2>
+      <p><strong>Introduction:</strong> A basic deep learning model for classifying images (e.g., animals).</p>
+      <p><strong>Description:</strong> Trained a CNN with data augmentation and regularization to reduce overfitting and improve validation accuracy.</p>
+      <p><strong>Objective:</strong> Build intuition for CNNs and practical tuning steps for vision tasks.</p>
+
+      <div class="row cols-2">
+        <div>
+          <h3>Process</h3>
+          <ul>
+            <li>Prepared dataset; resized and normalized images.</li>
+            <li>Built CNN; added dropout and augmentation.</li>
+            <li>Tuned hyperparameters based on learning curves.</li>
+          </ul>
+
+          <h3>Tools & Technologies</h3>
+          <ul>
+            <li>TensorFlow/Keras</li>
+            <li>NumPy, matplotlib</li>
+          </ul>
+        </div>
+        <div class="value">
+          <p><strong>Value Proposition</strong></p>
+          <p><em>Unique value:</em> Shows practical deep learning beyond classic ML.</p>
+          <p><em>Relevance:</em> Vision skills are widely applicable; demonstrates iterative tuning.</p>
+          <a class="btn" href="#" title="Link to repo or Colab">View Notebook</a>
+        </div>
+      </div>
+
+      <h3>References</h3>
+      <ul class="small">
+        <li>TensorFlow tutorials (image classification, augmentation, regularization).</li>
+      </ul>
+    </section>
+
+    <!-- Artifact 4 -->
+    <section id="artifact-4">
+      <h2>Artifact 4 — Machine Learning Lifecycle (Planning → Monitoring)</h2>
+      <p><strong>Introduction:</strong> A short summary of the six stages that make ML projects work in practice.</p>
+      <p><strong>Description:</strong> Planning, Data Preparation, Model Engineering, Model Evaluation, Deployment, and Monitoring & Maintenance—each with simple checkpoints.</p>
+      <p><strong>Objective:</strong> Show structured thinking across the full ML pipeline, not just modeling.</p>
+
+      <div class="row cols-2">
+        <div>
+          <h3>Process</h3>
+          <ul>
+            <li>Reviewed lifecycle lesson content and examples.</li>
+            <li>Mapped risks/metrics per stage; created a concise summary.</li>
+            <li>Completed a short knowledge check to validate understanding.</li>
+          </ul>
+
+          <h3>Tools & Technologies</h3>
+          <ul>
+            <li>Python (concepts), common ML metrics</li>
+            <li>AutoML concepts (intro level)</li>
+          </ul>
+        </div>
+        <div class="value">
+          <p><strong>Value Proposition</strong></p>
+          <p><em>Unique value:</em> Emphasizes process discipline—how to plan, evaluate, deploy, and maintain.</p>
+          <p><em>Relevance:</em> Useful for communicating with stakeholders and aligning expectations.</p>
+          <a class="btn" href="#" title="Link to write-up or slide">View Summary</a>
+        </div>
+      </div>
+
+      <h3>References</h3>
+      <ul class="small">
+        <li>Course readings: ML lifecycle overviews; intro AutoML materials.</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a> &nbsp;|&nbsp; GitHub: <a href="https://github.com/naveenpaulkolli" target="_blank">github.com/naveenpaulkolli</a></p>
+      <p class="small">Note: Reflections are submitted separately in Brightspace per course instructions.</p>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Naveenpaul Kolli. All rights reserved.</p>

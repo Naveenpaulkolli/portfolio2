@@ -220,6 +220,71 @@
       </ul>
     </section>
 
+      <!-- Artifact 5 – Android Malware: Model Validation & Ethics -->
+  <section>
+    <h2>Artifact 5 – Android Malware Detection: Model Validation & Ethics</h2>
+
+    <p><strong>Target Audience:</strong> Entry-level AI/ML hiring managers and course instructors evaluating my ability to design trustworthy ML workflows for security use cases.</p>
+
+    <h3>Introduction</h3>
+    <p>
+      This artifact presents a validation and verification framework for detecting Android malware using classic ML techniques.
+      It focuses on how I would clean and prepare features, select models, validate performance, and address ethics and ongoing monitoring—skills that matter in real-world security analytics.
+    </p>
+
+    <h3>Description</h3>
+    <p>
+      Using the public <em>Android Malware Dataset for Machine Learning</em> (Yerima, 2018), I outline a practical plan to turn app-level features
+      (permissions, API/call patterns) into a reproducible pipeline. Rather than claiming specific accuracy, this artifact emphasizes
+      defensible process: data readiness, model choice rationale, fair evaluation, and post-deployment safeguards.
+    </p>
+
+    <h3>Objective</h3>
+    <ul>
+      <li>Design a transparent validation approach that balances accuracy with fairness and reliability.</li>
+      <li>Document how to monitor drift and retrain as new malware families appear.</li>
+      <li>Demonstrate ethical awareness (privacy, bias, responsible use) in a security context.</li>
+    </ul>
+
+    <h3>Process</h3>
+    <ul>
+      <li><strong>Data Readiness:</strong> Inspect missing values, duplicate apps, and label integrity; standardize feature types; remove leakage columns (e.g., post-label artifacts).</li>
+      <li><strong>Feature Handling:</strong> One-hot/boolean encoding for permissions; frequency caps for rare permissions; optional PCA for very high-dimensional vectors.</li>
+      <li><strong>Class Imbalance:</strong> Compare <em>class_weight</em> vs. resampling (SMOTE). Start with class weights to avoid synthetic artifacts; document tradeoffs.</li>
+      <li><strong>Model Candidates:</strong> Logistic Regression (baseline, interpretable), Random Forest (nonlinear patterns, robust), Linear SVM (high-dimensional sparse signals).</li>
+      <li><strong>Validation:</strong> Stratified train/validation/test split; 5-fold stratified CV; track seeds for reproducibility. Guardrail on metrics leakage.</li>
+      <li><strong>Metrics:</strong> Precision/Recall, F1 (macro), ROC-AUC/PR-AUC; confusion matrix by class; threshold tuning based on business risk (false-negatives vs. false-positives).</li>
+      <li><strong>Error Analysis:</strong> Review top false-negatives (missed malware) and false-positives (benign apps flagged); examine permission patterns and SHAP-style feature attributions.</li>
+      <li><strong>Post-Deployment:</strong> Drift checks (population stability index on key features), monthly performance re-eval, safe rollback, and a retraining playbook on fresh samples.</li>
+      <li><strong>Ethics & Privacy:</strong> Use only public, de-identified features; document limitations and avoid over-claiming “safety.” Provide appeal/override path for flagged apps.</li>
+    </ul>
+
+    <h3>Tools & Technologies Used</h3>
+    <ul>
+      <li><strong>Python</strong> with <strong>pandas</strong>, <strong>scikit-learn</strong> (StratifiedKFold, class_weight, pipelines).</li>
+      <li>Visualization for diagnostics: confusion matrix, PR curves, drift charts.</li>
+      <li>Reproducibility: requirements.txt, fixed random seeds, simple experiment log.</li>
+    </ul>
+
+    <h3>Value Proposition</h3>
+    <p><strong>Unique Value:</strong> Instead of only chasing accuracy, this artifact shows I can design a <em>trustworthy</em> workflow—clear validation, risk-aware thresholds, and ongoing monitoring for a changing threat landscape.</p>
+    <p><strong>Relevance:</strong> Security and compliance teams need explainable, maintainable models. This plan fits enterprise expectations for governance and model lifecycle care.</p>
+
+    <h3>References</h3>
+    <ul>
+      <li>Yerima, S. (2018). <em>Android malware dataset for machine learning 2</em>. figshare. <a href="https://doi.org/10.6084/m9.figshare.5854653.v1" target="_blank" rel="noopener">https://doi.org/10.6084/m9.figshare.5854653.v1</a></li>
+      <li>Yerima, S., & Sezer, S. (2017). <em>Machine Learning for Android Malware Detection</em>. IEEE (paper referenced by dataset record).</li>
+    </ul>
+
+    <h3>Changelog – Feedback Incorporated (From Workshop 5)</h3>
+    <ul>
+      <li>Added a clear <strong>Target Audience</strong> line at the top of each artifact.</li>
+      <li>Expanded <strong>Value Proposition</strong> to include “Unique Value” and “Relevance.”</li>
+      <li>Improved headings and ordering to match the checklist (Intro → Description → Objective → Process → Tools → Value → References).</li>
+      <li>Linked <strong>primary sources</strong> for the dataset/paper and trimmed generic claims.</li>
+    </ul>
+  </section>
+
     <!-- Contact -->
     <section id="contact">
       <h2>Contact</h2>
